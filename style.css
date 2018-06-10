@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 100;
+    margin: 3vh 3vw;
+}
+
+h2 {
+    color: #FFA500;
+    font-weight: 100;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+p {
+    margin: 3vh 10vw;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+#active {
+    opacity: 0.5;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid black;
+    margin-top: 5vh;
+}
+
+footer img {
+    height: 20px;
+    margin-top: 5px; 
+    display: inline-block
+}
+
+h5 {
+    margin: 0 10px;
+    font-weight: 100;
+    display: inline-block;
+}
+
+h6 {
+    margin: 10px 0 0 0;
+    font-weight: 100;
+}
+
+
+/* ----------HOME---------- */
+
+.homewrapper {
+    background-image: url(images/forest.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh;
+    grid-template-areas: "front";
+
+}
+
+@media screen and (min-width: 520px) {
+    .homewrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: 100vh;
+        grid-template-areas: "front front";
+    }
+
+    .nav {
+        margin-top: 20vh;
+    }
+
+    .front {
+        margin-top: 10vh;
+    }
+}
+
+.front {
+    grid-area: front;
+    text-align: center;
+}
+
+.front img {
+    height: 20vh;
+    margin-top: 20vh;
+}
+
+.nav {
+    list-style-type: none;
+    text-align: center;
+    padding: 1em;
+    margin-top: 20vh;
+}
+
+.nav li {
+    display: inline-block;
+    padding: inherit;
+}
+
+.nav a {
+    color: #FFA500;
+    font-size: 2.5em;
+    border: none;
+}
+
+/* /HOME */
+
+/* ----------FRONT----------- */
+
+.front2 {
+    grid-area: front2;
+    background-image: url(images/forest.jpg);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+}
+
+.front2 img {
+    float: left;
+    margin: 1em;
+    ;
+    height: 8vh
+}
+
+.nav2 {
+    overflow: hidden;
+    width: 100%;
+}
+
+.nav2 a {
+    display: none;
+    color: white;
+    text-align: center;
+    padding: 1em 1em;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav2 .icon {
+    float: right;
+    display: block;
+}
+
+@media screen and (min-width: 400px) {
+    .nav2 a {
+        display: inline-block;
+    }
+    .nav2 a.icon {
+        display: none;
+    }
+}
+
+
+.nav2.responsive {
+    position: relative;
+}
+
+.nav2.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.nav2.responsive a {
+    float: left;
+    display: block;
+    text-align: left;
+}
+
+
+
+/* /FRONT */
+
+/* ----------ABOUT---------- */
+
+.aboutwrapper {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "front2" "text";
+
+}
+
+@media screen and (min-width: 1000px) {
+    .aboutwrapper {
+        display: grid;
+        grid-template-columns: auto 1000px auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "front2 front2 front2" ". text .";
+    }
+}
+
+.profile {
+    height: 18vh;
+    margin: 2em;
+}
+
+.text {
+    grid-area: text;
+    text-align: center;
+}
+
+.city {
+    height: 12vh;
+    transition: transform .2s;
+    margin: 0 3vh;
+}
+
+.city:hover {
+    transform: scale(2.5);
+}
+
+.sport {
+    height: 5vh;
+    margin: 0 3vh;
+}
+
+/* /ABOUT */
+
+/* ----------PORTFOLIO---------- */
+
+.portfoliowrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas: "front2" "text_p" "design" "interaction" "communication" "business";
+}
+
+@media screen and (min-width: 400px) {
+    .portfoliowrapper {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "front2 front2" "text_p text_p" "design interaction" "communication business";
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .portfoliowrapper {
+        display: grid;
+        grid-template-columns: auto 500px 500px auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "front2 front2 front2 front2" ". text_p text_p ." ". design interaction ." ". communication business .";
+    }
+}
+
+.text_p {
+    grid-area: text_p;
+    text-align: center;
+}
+
+.design {
+    grid-area: design;
+    text-align: center;
+}
+
+.interaction {
+    grid-area: interaction;
+    text-align: center;
+}
+
+.communication {
+    grid-area: communication;
+    text-align: center;
+}
+
+.business {
+    grid-area: business;
+    text-align: center;
+}
+
+a img {
+    width: auto;
+    height: 15vh;
+}
+
+/* /PORTFOLIO */
+
+/* ----------OTHERS----------*/
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "front2" "text1" "text2" "text3" "text4";
+}
+
+@media screen and (min-width: 1000px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: auto 1000px auto;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "front2 front2 front2" ". text1 ." ". text2 ." ". text3 ." ". text4 ."
+    }
+}
+
+.text1 {
+    grid-area: text1;
+    text-align: center;
+}
+
+.text2 {
+    grid-area: text2;
+    text-align: center;
+}
+
+.text3 {
+    grid-area: text3;
+    text-align: center;
+}
+
+.text4 {
+    grid-area: text4;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.text1 a {
+    color: #FFA500;
+    border: 1px solid; 
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    width: 180px;
+    border-radius: 3px;
+}
+
+.text2 a {
+    color: #FFA500;
+    border: 1px solid; 
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    width: 180px;
+    border-radius: 3px;
+}
+
+.text3 a {
+    color: #FFA500;
+    border: 1px solid; 
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    width: 180px;
+    border-radius: 3px;
+}
+
+.text4 a {
+    color: #FFA500;
+    border: 1px solid; 
+    padding: 3px;
+    margin: 2px;
+    display: inline-block;
+    width: 180px;
+    border-radius: 3px;
+}
+
+.image {
+    height: 20vh;
+    border-radius: 5px;
+    transition: transform .2s;
+}
+
+.image:hover {
+    transform: scale(1.5);
+}
